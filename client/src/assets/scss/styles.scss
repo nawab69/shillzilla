@@ -1,0 +1,135 @@
+$black: #434140;
+$grey: #aaaeb3;
+$white: #f5f1ee;
+$blue-1: #6660c5;
+$blue-2: #3480eb;
+$purple: #b99feb;
+$shadow: #ebebee;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+
+body {
+  background: $white;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.box {
+  margin-top: 20px;
+  border: 1px $shadow solid !important;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 opacify($shadow, 0.18);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 5px;
+  // border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid opacify($shadow, 0.18);
+  &:hover {
+    box-shadow: 1px 2px 15px $shadow;
+  }
+}
+.box--1 {
+  @extend .box;
+  padding: 10%;
+}
+.baton {
+  padding: 5px 20px;
+  border-radius: 20px;
+  background: $shadow;
+  outline: none;
+  border: none;
+  border: 0.1em white solid !important;
+  color: $black;
+  box-shadow: 1px 2px 15px solid black !important;
+  &-remove {
+    background: $shadow;
+  }
+}
+
+.baton-buy {
+  @extend .baton;
+  border: none !important;
+}
+
+.tooltip-border {
+  @extend .box;
+  border-radius: 30px !important;
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  height: 40px;
+  border-left: 15px solid $shadow;
+}
+
+input[type="file"] {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  height: 40px;
+  border-left: 15px solid $shadow;
+}
+
+input[type="color"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  border-radius: 20px;
+  border-left: 15px solid $shadow;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  height: 200px;
+  border-radius: 20px;
+  border-left: 15px solid $shadow;
+  border-right: 15px solid $shadow;
+  width: 100%;
+  padding: 10px;
+}
+
+input[type="number"] {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  height: 40px;
+  border-left: 15px solid $shadow;
+  border-right: 15px solid $shadow;
+}
+
+select {
+  width: 20px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  height: 40px;
+  border-left: 15px solid $shadow;
+  border-right: 15px solid $shadow;
+}
+.cover {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div {
+  margin-bottom: 30px;
+}
